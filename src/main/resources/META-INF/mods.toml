@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+
+[[mods]]
+modId="tbum"
+version="${file.jarVersion}"
+displayName="Extra Features Mod"
+logoFile="examplemod.png"
+credits="To the team that helped create the mod"
+authors="WynnKunGz, Shadow"
+description='''
+Adds extra features for the modpack we are making
+'''
+
+[[dependencies.examplemod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+
+    ordering="NONE"
+
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
