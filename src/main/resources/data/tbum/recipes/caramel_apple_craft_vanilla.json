@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "tbum:carmel"
+    }
+  ],
+  "result": {
+    "item": "tbum:carmel_apple",
+    "count": 1
+  }
+}

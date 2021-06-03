@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:sugar"
+  },
+  "result": "tbum:carmel",
+  "experience": 0.35,
+  "cookingtime": 100
+}
