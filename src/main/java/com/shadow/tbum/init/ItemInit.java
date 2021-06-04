@@ -12,22 +12,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, UtilitiesMod.MOD_ID);
 
-    //food
-    public static final RegistryObject<Item> CARMEL_APPLE = ITEMS.register("carmel_apple",
-            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
-                    .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 200, 1), 0.95f)
-                    .nutrition(10).saturationMod(25f).alwaysEat().build())));
+    // Food
 
-    public static final RegistryObject<Item> CARMEL = ITEMS.register("carmel",
-            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
-                    .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 100, 0), 0.95f)
-                    .nutrition(4).saturationMod(0.4f).alwaysEat().build())));
+    public static final RegistryObject<Item> CARMEL_APPLE = ITEMS.register("carmel_apple", () ->
+            new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(FoodInit.CARMEL_APPLE)));
+    public static final RegistryObject<Item> CARMEL = ITEMS.register("carmel", () ->
+            new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(FoodInit.CARMEL)));
+    public static final RegistryObject<Item> HAMBURGER = ITEMS.register("HAMBURGER", () ->
+            new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(FoodInit.HAMBURGER)));
+    public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce", () ->
+            new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(FoodInit.LETTUCE)));
 
-    public static final RegistryObject<Item> HAMBURGER = ITEMS.register("hamburger",
-            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
-                    .nutrition(30).saturationMod(50f).alwaysEat().build())));
-
-    public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce",
-            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
-                    .nutrition(2).saturationMod(1f).alwaysEat().fast().build())));
 }
