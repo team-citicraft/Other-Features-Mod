@@ -14,12 +14,12 @@ public class ItemInit {
 
     //food
     public static final RegistryObject<Item> CARMEL_APPLE = ITEMS.register("carmel_apple",
-            () -> new Item(new Item.Properties().group(UtilitiesMod.TAB).food(new Food.Builder()
-                    .effect(() -> new EffectInstance(Effects.SPEED, 200, 1), 0.95f)
-                    .hunger(10).saturation(20f).setAlwaysEdible().build())));
+            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
+                    .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 200, 1), 0.95f)
+                    .nutrition(10).saturationMod(25f).alwaysEat().build())));
 
     public static final RegistryObject<Item> CARMEL = ITEMS.register("carmel",
-            () -> new Item(new Item.Properties().group(UtilitiesMod.TAB).food(new Food.Builder()
-                    .effect(() -> new EffectInstance(Effects.SPEED, 100, 0), 0.95f)
-                    .hunger(4).saturation(0.4f).setAlwaysEdible().build())));
+            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
+                    .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 100, 0), 0.95f)
+                    .nutrition(4).saturationMod(0.4f).alwaysEat().build())));
 }

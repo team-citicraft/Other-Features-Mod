@@ -34,14 +34,14 @@ public class UtilitiesMod
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            event.getRegistry().register(new BlockItem(block, new Item.Properties().group(UtilitiesMod.TAB))
+            event.getRegistry().register(new BlockItem(block, new Item.Properties().tab(UtilitiesMod.TAB))
                     .setRegistryName(block.getRegistryName()));
         });
     }
 
     public static final ItemGroup TAB = new ItemGroup("UtilitiesModTab") {
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(Items.DIAMOND_PICKAXE);
         }
     };
