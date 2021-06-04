@@ -4,7 +4,7 @@ license="All rights reserved"
 
 [[mods]]
 modId="tbum"
-version="${file.jarVersion}"
+version="1.0.0"
 displayName="Extra Features Mod"
 logoFile="examplemod.png"
 credits="To the team that helped create the mod"
