@@ -22,4 +22,12 @@ public class ItemInit {
             () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
                     .effect(() -> new EffectInstance(Effects.MOVEMENT_SPEED, 100, 0), 0.95f)
                     .nutrition(4).saturationMod(0.4f).alwaysEat().build())));
+
+    public static final RegistryObject<Item> HAMBURGER = ITEMS.register("hamburger",
+            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
+                    .nutrition(30).saturationMod(50f).alwaysEat().build())));
+
+    public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce",
+            () -> new Item(new Item.Properties().tab(UtilitiesMod.TAB).food(new Food.Builder()
+                    .nutrition(2).saturationMod(1f).alwaysEat().fast().build())));
 }
